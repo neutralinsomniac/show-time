@@ -1,2 +1,7 @@
-all: show-time.c
-	gcc -o show-time $<
+all: show-time
+
+show-time: show-time.c
+	gcc -o $@ $<
+
+clean:
+	rm -f show-time
